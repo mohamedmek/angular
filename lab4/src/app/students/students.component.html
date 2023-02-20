@@ -1,0 +1,16 @@
+<br>
+<table class="table table-dark m-5" style="width: 500px;">
+  <thead>
+    <tr style="text-align: center">
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students" style="text-align: center">
+      <td>{{ student.name }}</td>
+      <td>{{ student.age }}</td>
+    </tr>
+
+  </tbody>
+</table>
