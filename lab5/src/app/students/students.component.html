@@ -1,0 +1,30 @@
+<div class="row d-flex ms-5" >
+  <div class="col-lg-12 col-md-9 col-sm-6">
+      <div class="container" >
+          <table class="table mt-4">
+              <thead>
+                  <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Age</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">Action</th>
+
+                  </tr>
+              </thead>
+              <tbody>
+                      <tr *ngFor="let s of students">
+                        <td>{{ s.id }}</td>
+                          <td>{{ s.name }}</td>
+                          <td>{{ s.age }}</td>
+                          <td>{{ s.email }}</td>
+                          <td >
+                                  <a [routerLink]="['/students', s.id ]" class="btn m-2 text-light fw-bold" style="background-color: #A0C3D2">View</a>
+                                  <a [routerLink]="['/update', s.id]" class="btn m-2 routetext-light fw-bold" style="background-color: #EAC7C7">Update</a>
+                                  <a (click)="deleteStudent(s.id)" class="btn btn-dark m-2 text-light fw-bold" >Delete</a>
+                                  <a [routerLink]="['/add']" class=" btn" style="color:#FAF8F1; background-color:#3440ad">ADD</a>
+
+                                  </td>
+                      </tr>
+              </tbody>
+          </table>

@@ -1,0 +1,30 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<div
+  class="container mt-5"
+  style=" background-color: rgb(238, 234, 234); width: 650px"
+>
+  <form (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <input type="name" #name class="form-control" id hidden [(ngModel)]="student.name" name="name" />
+
+      <label class="form-label fw-bold">Name</label>
+      <input type="name" #name class="form-control"  [(ngModel)]="student.name" name="name" />
+    </div>
+    <div class="mb-3">
+      <label class="form-label fw-bold">Age</label>
+      <input class="form-control" #age type="number"  [(ngModel)]="student.age" name="age" />
+    </div>
+    <div class="mb-3">
+      <label class="form-label fw-bold">Email</label>
+      <input class="form-control" #email type="email" [(ngModel)]="student.email"  name="email" />
+    </div>
+    <button type="submit"
+    class="btn mb-3"
+    style="width: 100% ; background-color:#85586F ; color:#FAF8F1;"
+  >
+  update
+  </button>
+  </form>
+</div>

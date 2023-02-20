@@ -5,26 +5,26 @@ import { HttpClient } from '@angular/common/http';
 })
 export class StudentsService {
 
-  constructor(public myClient:HttpClient ) { }
+  constructor(public httpClient:HttpClient ) { }
   BaseUrl="http://localhost:3000/students";
-   // Get all students
-getAllStudents(){
-  return this.myClient.get(this.BaseUrl)
+
+  getAllStudents(){
+  return this.httpClient.get(this.BaseUrl)
 }
-// Get student by ID
+
 getStudentById(id:any) {
-  return this.myClient.get(this.BaseUrl+"/"+id)
+  return this.httpClient.get(this.BaseUrl+"/"+id)
 }
- // Add new student
- addStudent(student:any) {
-  return this.myClient.post(this.BaseUrl,student)
+
+addStudent(student:any) {
+  return this.httpClient.post(this.BaseUrl,student)
 }
-  // Update student
+
 updateStudent(id:any,student:any) {
-  return this.myClient.put(this.BaseUrl+"/"+id, student)
+  return this.httpClient.put(this.BaseUrl+"/"+id, student)
 }
-  // Delete student
-  deleteStudent(id:any) {
-    return this.myClient.delete(this.BaseUrl+"/"+id)
+
+deleteStudent(id:any) {
+    return this.httpClient.delete(this.BaseUrl+"/"+id)
   }
 }

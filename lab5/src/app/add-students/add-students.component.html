@@ -1,0 +1,29 @@
+
+<div
+  class="container mt-5"
+  style=" background-color: rgb(238, 234, 234); width: 650px"
+>
+  <form [formGroup] = "myFormControll" 
+  >
+    <div class="mb-3">
+      <label class="form-label fw-bold">Name</label>
+      <input type="name" #name class="form-control" formControlName="name" name="name" />
+    </div>
+    <div class="mb-3">
+      <label class="form-label fw-bold">Age</label>
+      <input class="form-control" #age type="number" formControlName="age" name="age" />
+    </div>
+    <div class="mb-3">
+      <label class="form-label fw-bold">Email</label>
+      <input class="form-control" #email type="email" formControlName="email" name="email" />
+    </div>
+
+    <input
+    (click)="validationCheck(name.value , age.value , email.value)"
+      type="button"
+      value="Register"
+      class="btn mb-3"
+      style="width: 100% ; background-color:#85586F ; color:#FAF8F1;"
+    >
+  </form>
+</div>
